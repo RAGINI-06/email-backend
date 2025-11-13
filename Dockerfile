@@ -1,6 +1,6 @@
 
-# Use the latest Java 21 slim image
-FROM openjdk:21-jdk-slim
+# Use the latest Java 24 slim image
+FROM openjdk:24-jdk-slim
 
 # Set working directory inside the container
 WORKDIR /app
