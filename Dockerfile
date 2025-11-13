@@ -1,6 +1,7 @@
 
-# Use the latest Java 24 slim image
-FROM openjdk:24-jdk-slim
+
+# Use Eclipse Temurin JDK 21 (LTS) slim image
+FROM eclipse-temurin:21-jdk-jammy
 
 # Set working directory inside the container
 WORKDIR /app
@@ -22,7 +23,7 @@ COPY src src
 # Build the project without running tests
 RUN ./mvnw clean package -DskipTests
 
-# Expose port (change if your app uses a different one)
+# Expose port
 EXPOSE 8080
 
 # Run the JAR file
